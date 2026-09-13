@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivolas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header img{
+            height: 70px;
+
+        }
+
+        header{
+            background-color: #1c3581;
+            padding: 5px 40px;
+        }
+
+        main img{
+            height: 140px;
+        }
+
+        main h1{
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1c3581;
+
+        }
+
+        main p{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            text-align: center;
+            padding-top: 150px;
+        }
+        main button{
+            border: none;
+            background-color: #1c3581;
+            color: white;
+            padding: 19px 20px;
+            width: 250px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        .button{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .inner-election{
+            
+            display: none;
+        }
+
+        .active{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            padding-top: 15px;
+            gap: 20px;
+        }
+
+        /* .inner-election h1{
+            font-weight: lighter;
+        } */
+
+        .inner-election a{
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .inner-election a:hover{
+            background-color: white;
+            color: #1c3581;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 10px;
+        }
+
+        .election{
+            background-color: #1c3581;
+            border-radius: 15px;
+        }
+
+
+
+        @media (max-width : 500px){
+            main button{
+                padding: 10px 8px;
+                width: 150px;
+                border-radius: 15px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+             main h1{
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #1c3581;
+            }
+
+             main{
+                padding-top: 100px;
+            }
+
+            main img{
+                height: 100px;
+
+            }
+
+            .button{
+                gap: 10px;
+            }
+
+            .active{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 10px;
+                padding-top: 15px;
+                gap: 20px;
+            }
+
+            .inner-election h2{
+                font-size: 15px;
+            }
+
+            .button{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="./images/sivolaslogo2.png" alt="">
+    </header>
+
+    <main>
+        <img src="./images/sivolaswhitelogo.jpg" alt="">
+        <h1>Welcome to Sivolas</h1> <br>
+        <p>Choose an option below to continue</p> <br> <br>
+        <div class="button">
+            <button id="song" onclick="window.location.href='songlot.html'"><span class="material-symbols-outlined">music_note_2</span> Take Lot</button>
+            <div class="election">
+                <button id="election" onclick="toggleMenu()"><span class="material-symbols-outlined">how_to_vote</span>Conduct Election</button>
+
+                <div class="inner-election" id="electionmenu">
+                    <h2> <a href="./president.html">Choose President</a> </h2>
+                    <h2> <a href="./secretary.html">Choose Secretary</a> </h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        const toggleMenu = () =>{
+            let menu = document.getElementById('electionmenu');
+            
+            menu.classList.toggle('active');
+        }
+
+    </script>
+</body>
+</html>
